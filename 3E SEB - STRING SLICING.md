@@ -39,3 +39,4 @@ else:
 
 
 ### RESULT
+The program successfully verifies whether the input string contains a valid uppercase-letter pattern separated by an underscore and displays the appropriate message.
