@@ -1,30 +1,41 @@
 # Exp.No:3e
-## SEB - STRING SLICING
-
----
+## SEB -Matching Uppercase Letter Patterns Using Regular Expressions in Python
 
 ### AIM  
-To write a Python function that accepts a string and forms a new string by reversing the characters from the **4th position to the 10th position** with **alternate characters**, and then prints the new string.
-
----
+To write a Python program that checks whether a given string contains a pattern of uppercase letters followed by an underscore and one or more uppercase letters using regular expressions.
 
 ### ALGORITHM
 
-1. Begin the program.  
-2. Accept a string as input.  
-3. Take a slice of the input string from index **2** to **10** (Python uses 0-based indexing, so index 2 refers to the 3rd character, i.e., the 4th character in natural terms).  
-4. Reverse the sliced substring.  
-5. Extract every second character from the reversed substring using slicing (`[::2]`).  
-6. Print the final processed string.  
-7. Terminate the program.
-
----
+```
+1.Start the program.
+2.Import the re module for regular expression operations.
+3.Take an input string from the user and store it in variable s.
+4.Define the regex pattern:
+  r'[A-Z]*_[A-Z]+'
+ This represents:
+    A-Z* → zero or more uppercase letters
+    _ → an underscore
+    A-Z+ → one or more uppercase letters
+5.Use re.search(pattern, s) to check if the input string matches the pattern.
+6.If a match is found, print "Found a match!".
+7.Otherwise, print "Not matched!".
+8.End the program.
+```
 
 ### PROGRAM
 
 ```
+import re
+s=input()
+pattern=r'[A-Z]*_[A-Z]+'
+if re.search(pattern,s):
+    print("Found a match!")
+else:
+    print("Not matched!")
 ```
 
 ### OUTPUT
+<img width="1172" height="312" alt="image" src="https://github.com/user-attachments/assets/5dacaaa6-8032-46ae-b2c6-0b11798d00f5" />
+
 
 ### RESULT
